@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); /* Importa a fonte 'Quicksand' do Google Fonts para ser usada na página. */
+
+* { /* Seletor universal: aplica as seguintes regras a TODOS os elementos da página. */
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos no tamanho total do elemento, não adicionados a ele. */
+}
+
+:root { /* Pseudo-classe que representa o elemento raiz do documento (o <html>). Usado para declarar variáveis CSS globais. */
+    --primary-color: #8ab4f8; /* Declara uma variável CSS para a cor primária (um azul claro). */
+    --secondary-color: #e8eaed; /* Declara uma variável para a cor secundária (um cinza claro). */
+    --tertiary-color: #9aa0a6; /* Declara uma variável para a cor terciária (um cinza médio). */
+    --bg-color: #202124; /* Declara uma variável para a cor de fundo principal (um cinza escuro). */
+}
+
+body { /* Seletor para o elemento <body>, que contém todo o conteúdo visível da página. */
+    margin: 0; /* Remove a margem padrão que os navegadores aplicam ao <body>. */
+    background: var(--bg-color); /* Define a cor de fundo do corpo da página usando a variável --bg-color. */
+    color: var(--secondary-color); /* Define a cor padrão do texto para toda a página usando a variável --secondary-color. */
+    font-family: "Quicksand", sans-serif; /* Define a família de fontes padrão, com 'Quicksand' como primeira opção. */
+}
+
+header { /* Seletor para o elemento <header>. */
+    padding: 2rem 1rem; /* Define o espaçamento interno: 2rem em cima/baixo e 1rem nas laterais. */
+    display: flex; /* Ativa o modelo de layout Flexbox para os filhos diretos do header. */
+    align-items: center; /* Alinha os itens filhos verticalmente ao centro. */
+    justify-content: space-around; /* Distribui os itens filhos com espaço igual ao redor deles. */
+    position: sticky; /* Faz o cabeçalho "grudar" no topo da tela quando o usuário rola a página. */
+    top: 0; /* Define a posição do topo para 0, para que o header grude no topo da viewport. */
+    background: var(--bg-color); /* Define a cor de fundo do cabeçalho, igual à do body para um efeito contínuo. */
+    z-index: 10; /* Garante que o cabeçalho fique acima de outros elementos da página durante a rolagem. */
+    border-bottom: 1px solid var(--bg-color); /* Adiciona uma borda sutil na parte inferior do cabeçalho. */
+    gap: 1rem; /* Cria um espaçamento de 1rem entre os elementos filhos do header. */
+}
+
+header h1 { /* Seletor para os elementos <h1> que estão dentro do <header>. */
+    font-size: 1.5rem; /* Define o tamanho da fonte do título. */
+    margin: 0; /* Remove qualquer margem padrão do h1. */
+    font-weight: 500; /* Define o peso da fonte como médio. */
+    white-space: nowrap; /* Impede que o texto do título quebre em várias linhas. */
+}
+
+/* Adicionada a classe .search-container para maior especificidade */
+.search-container { /* Seletor para o elemento com a classe 'search-container'. */
+    display: flex; /* Ativa o Flexbox para alinhar o input e o botão na mesma linha. */
+}
+.search-container input { /* Seletor para os elementos <input> dentro de '.search-container'. */
+    padding: 0.375rem 0.75rem; /* Define o espaçamento interno do campo de busca. */
+    border-radius: 1rem; /* Arredonda as bordas do campo de busca. */
+    border: 1px solid var(--tertiary-color); /* Define uma borda com a cor terciária. */
+    background: var(--bg-color); /* Define a cor de fundo do campo de busca. */
+    font-family: inherit; /* Faz o campo de busca herdar a fonte do elemento pai (body). */
+    font-size: 1.5rem; /* Define o tamanho da fonte do texto digitado. */
+    transition: all 0.2s ease; /* Adiciona uma transição suave para todas as propriedades que mudam (ex: foco). */
+    width: 30rem; /* Define uma largura fixa para o campo de busca. */
+    color: var(--secondary-color); /* Define a cor do texto que o usuário digita. */
+    margin-right: .5rem; /* Adiciona uma margem à direita para separar do botão. */
+}
+
+.search-container input::placeholder { /* Seletor para o texto de placeholder do campo de busca. */
+    font-size: 1.2rem; /* Define o tamanho da fonte do texto do placeholder. */
+    font-weight: 300; /* Define o peso da fonte do placeholder como leve. */
+    color: var(--tertiary-color); /* Define a cor do texto do placeholder. */
+}
+
+.search-container input:focus { /* Seletor para quando o campo de busca está em foco (selecionado). */
+    outline: none; /* Remove a borda de foco padrão do navegador. */
+    border-color: var(--bg-color); /* Muda a cor da borda para a cor de fundo, fazendo-a "desaparecer". */
+    box-shadow: 0 0 0 0.1rem var(--tertiary-color); /* Adiciona uma sombra sutil para indicar que o campo está focado. */
+}
+
+#botao-busca { /* Seletor para o elemento com o ID 'botao-busca'. */
+    padding: 1rem 2rem; /* Define o espaçamento interno do botão. */
+    border-radius: 1rem; /* Arredonda as bordas do botão. */
+    border: none; /* Remove a borda padrão do botão. */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar o mouse sobre o botão. */
+    font-family: inherit; /* Faz o botão herdar a fonte do elemento pai. */
+    font-weight: 500; /* Define o peso da fonte do texto do botão. */
+    font-size: 1rem; /* Define o tamanho da fonte do texto do botão. */
+    white-space: nowrap; /* Impede que o texto do botão quebre em várias linhas. */
+    transition: background-color 0.2s ease, color 0.2s ease; /* Adiciona uma transição suave para as mudanças de cor. */
+    background-color: var(--bg-color); /* Define a cor de fundo inicial do botão. */
+    color: var(--secondary-color); /* Define a cor do texto inicial do botão. */
+    border: 1px solid var(--bg-color); /* Adiciona uma borda da mesma cor do fundo. */
+}
+
+#botao-busca:hover { /* Seletor para quando o mouse está sobre o botão. */
+    background-color: var(--primary-color); /* Muda a cor de fundo para a cor primária. */
+    color: var(--bg-color); /* Muda a cor do texto para a cor de fundo (escura). */
+    box-shadow: 0 0 0 0.1rem var(--primary-color); /* Adiciona uma sombra da mesma cor do novo fundo. */
+}
+
+#botao-busca:active { /* Seletor para quando o botão está sendo clicado. */
+    transform: scale(0.98); /* Aplica uma leve redução de tamanho para dar feedback de clique. */
+}
+
+main { /* Seletor para o elemento <main>, o conteúdo principal. */
+    overflow-y: scroll; /* Adiciona uma barra de rolagem vertical se o conteúdo for maior que a altura definida. */
+    max-width: 80rem; /* Define a largura máxima para o conteúdo principal, para melhor legibilidade em telas grandes. */
+    margin: 0 auto; /* Centraliza o bloco 'main' horizontalmente na página. */
+    margin-top: 2rem; /* Adiciona uma margem no topo para separar do cabeçalho. */
+    height: calc(100vh - 10rem - 4rem); /* Calcula a altura do main para ocupar o espaço restante na tela (altura da viewport - altura do header - altura do footer). */
+}
+
+article { /* Seletor para todos os elementos <article>. */
+    background: none; /* Garante que não haja cor de fundo. */
+    border-radius: 0; /* Garante que não haja bordas arredondadas. */
+    padding: 0; /* Remove qualquer padding pré-existente. */
+    padding: 0 1rem; /* Adiciona espaçamento interno apenas nas laterais. */
+    margin-bottom: 1.25rem; /* Adiciona uma margem na parte inferior para separar os artigos. */
+    box-shadow: none; /* Garante que não haja sombra. */
+    transition: background-color 0.3s ease, border-bottom-color 0.3s ease; /* Adiciona uma transição suave para mudanças de cor. */
+    border-bottom: 1px solid var(--bg-color); /* Adiciona uma linha divisória sutil na parte inferior. */
+    padding-bottom: 1.5rem; /* Adiciona espaçamento interno na parte inferior. */
+}
+
+article:hover { /* Seletor para quando o mouse está sobre um artigo. */
+    transform: scale(1.01); /* Aumenta ligeiramente o tamanho do artigo para dar feedback visual. */
+    cursor: pointer; /* Muda o cursor para uma mãozinha, indicando que é clicável. */
+}
+
+article h2 { /* Seletor para os títulos <h2> dentro dos artigos. */
+    margin-top: 0; /* Remove a margem superior padrão do h2. */
+    font-weight: 600; /* Define o peso da fonte como semi-negrito. */
+    font-size: 1.6rem; /* Define o tamanho da fonte do título do artigo. */
+    border-bottom: none; /* Garante que não haja borda inferior. */
+    padding-bottom: 0; /* Garante que não haja espaçamento interno inferior. */
+    margin-bottom: 0.25rem; /* Adiciona uma pequena margem inferior para separar do parágrafo. */
+    color: var(--primary-color); /* Define a cor do título usando a variável de cor primária. */
+}
+
+article p { /* Seletor para os parágrafos <p> dentro dos artigos. */
+    margin: 0.5rem 0; /* Adiciona margem em cima e embaixo do parágrafo. */
+    line-height: 1.6; /* Aumenta a altura da linha para melhorar a legibilidade. */
+    font-size: 1rem; /* Define o tamanho da fonte do texto do parágrafo. */
+    margin-bottom: 0.5rem; /* Adiciona uma margem inferior. */
+    color: var(--secondary-color); /* Define a cor do texto do parágrafo. */
+}
+
+article p strong { /* Seletor para o texto em negrito (<strong>) dentro dos parágrafos. */
+    color: var(--tertiary-color); /* Define uma cor diferente para o texto em negrito. */
+    font-weight: 400; /* Define o peso da fonte como normal (para um negrito mais sutil). */
+}
+
+article a { /* Seletor para os links <a> dentro dos artigos. */
+    color: var(--primary-color); /* Define a cor do link usando a variável de cor primária. */
+    text-decoration: none; /* Remove o sublinhado padrão dos links. */
+    font-weight: 200; /* Define o peso da fonte como extra-leve. */
+}
+
+article a:hover { /* Seletor para quando o mouse está sobre um link do artigo. */
+    text-decoration: underline; /* Adiciona um sublinhado para indicar interatividade. */
+}
+
+.footer { /* Seletor para o elemento com a classe 'footer'. */
+    position: absolute; /* Define o posicionamento como absoluto em relação ao <body> (ou pai posicionado). */
+    bottom: 0; /* Alinha o rodapé na parte inferior da página. */
+    left: 0; /* Alinha o rodapé à esquerda da página. */
+    width: 100%; /* Faz o rodapé ocupar 100% da largura da página. */
+    color: var(--tertiary-color); /* Define a cor do texto do rodapé. */
+    background-color: var(--bg-color); /* Define a cor de fundo do rodapé. */
+    padding: 15px 20px; /* Adiciona espaçamento interno. */
+    border-top: 1px solid #3c4043; /* Adiciona uma linha divisória no topo do rodapé. */
+    font-size: 0.8rem; /* Define um tamanho de fonte menor para o texto do rodapé. */
+}
+
+.footer-location { /* Seletor para o elemento com a classe 'footer-location'. */
+    color: #9aa0a6; /* Define a cor do texto da localização. */
+    margin-bottom: 10px; /* Adiciona uma margem inferior para separar da lista de links. */
+}
+
+.footer-links { /* Seletor para a lista de links no rodapé. */
+    list-style: none; /* Remove os marcadores (bolinhas) da lista. */
+    display: flex; /* Ativa o Flexbox para alinhar os links. */
+    flex-wrap: wrap; /* Permite que os links quebrem para a próxima linha em telas menores. */
+    justify-content: center; /* Centraliza os links horizontalmente. */
+    gap: 15px; /* Cria um espaçamento entre cada link. */
+}
+
+.footer-links a { /* Seletor para os links <a> dentro da lista de links do rodapé. */
+    color: var(--secondary-color); /* Define a cor do texto dos links. */
+    text-decoration: none; /* Remove o sublinhado padrão. */
+    transition: color 0.2s; /* Adiciona uma transição suave para a mudança de cor. */
+}
+
+.footer-links a:hover { /* Seletor para quando o mouse está sobre um link do rodapé. */
+    color: var(--primary-color); /* Muda a cor do link para a cor primária. */
+}
+
+@media (max-width: 768px) { /* Inicia um bloco de regras que só se aplicam em telas com largura máxima de 768px (tablets, celulares). */
+    header { /* Estilos para o cabeçalho em telas menores. */
+        flex-direction: column; /* Organiza os itens do cabeçalho em uma coluna (um abaixo do outro). */
+        padding: 1rem; /* Reduz o espaçamento interno do cabeçalho. */
+    }
+
+    header h1 { /* Estilos para o título no cabeçalho em telas menores. */
+        text-align: center; /* Centraliza o texto do título. */
+        margin-bottom: 1rem; /* Adiciona uma margem inferior para separar da barra de busca. */
+    }
+
+    .search-container input { /* Estilos para o campo de busca em telas menores. */
+        width: 90vw; /* Define a largura como 90% da largura da tela. */
+        font-size: 1.2rem; /* Reduz o tamanho da fonte. */
+    }
+
+    main { /* Estilos para o conteúdo principal em telas menores. */
+        padding: 0 1rem; /* Adiciona espaçamento lateral para não colar nas bordas da tela. */
+    }
+
+    article:hover { /* Estilos para o artigo em telas menores. */
+        transform: none; /* Remove o efeito de zoom ao passar o mouse, que pode não funcionar bem em touchscreens. */
+    }
+}
+
+@media (max-width: 480px) { /* Inicia um bloco de regras para telas com largura máxima de 480px (celulares). */
+    header h1 { /* Estilos para o título em telas muito pequenas. */
+        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte do título. */
+        max-width: 70%; /* Define uma largura máxima para evitar que o título ocupe muito espaço. */
+        word-wrap: break-word; /* Permite que palavras longas quebrem para a próxima linha. */
+    }
+
+    .search-container input, /* Seletor para o campo de busca e seu placeholder em telas muito pequenas. */
+    .search-container input::placeholder {
+        font-size: 1rem; /* Reduz o tamanho da fonte para ambos. */
+    }
+
+    article h2 { /* Estilos para o título do artigo em telas muito pequenas. */
+        font-size: 1.3rem; /* Reduz o tamanho da fonte. */
+    }
+    /* Usando a classe específica em vez do seletor 'div' genérico */
+    .search-container { /* Estilos para o contêiner de busca em telas muito pequenas. */
+        display: flex; /* Garante o uso de Flexbox. */
+        align-items: center; /* Alinha os itens ao centro. */
+        justify-content: center; /* Centraliza os itens. */
+        flex-direction: column; /* Organiza o input e o botão em coluna. */
+        gap: 0.5rem; /* Reduz o espaçamento entre o input e o botão. */
+    }
+
+    .footer { /* Estilos para o rodapé em telas muito pequenas. */
+        display: none; /* Oculta completamente o rodapé para economizar espaço. */
+    }
+
+    /* Usando o ID específico em vez do seletor 'button' genérico */
+    #botao-busca { /* Estilos para o botão de busca em telas muito pequenas. */
+        margin-top: 1rem; /* Adiciona uma margem no topo para separar do campo de busca. */
+    }
+}

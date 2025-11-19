@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-br"> <!-- Inicia o documento HTML e define o idioma principal como português do Brasil -->
+<head> <!-- Inicia a seção de metadados e informações sobre o documento -->
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 para suportar acentos e símbolos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para que o site seja responsivo em dispositivos móveis -->
+    <title>Base de Conhecimento</title> <!-- Define o título que aparece na aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Vincula o arquivo de folha de estilos CSS externo -->
+
+</head> <!-- Fecha a seção de metadados -->
+<body> <!-- Inicia o corpo do documento, onde o conteúdo visível é colocado -->
+    <header> <!-- Define o cabeçalho da página -->
+        <h1>Base de Conhecimento</h1> <!-- Define o título principal visível na página -->
+        <div class="search-container"> <!-- Cria um contêiner para agrupar os elementos de busca -->
+            <input type="search" placeholder="Pesquise um artigo..."> <!-- Cria um campo de entrada de texto para pesquisa com um texto de exemplo -->
+            <button id="botao-busca">Buscar</button> <!-- Cria um botão com o texto "Buscar" e um ID para estilização/script -->
+        </div> 
+    </header> 
+
+    <main> <!-- Define o conteúdo principal da página -->
+        <section class="card-container"> <!-- Define uma seção temática dentro do conteúdo principal -->
+            <article class="card"> <!-- Define um artigo ou um bloco de conteúdo independente -->
+                <h2>JavaScript</h2> 
+                <p>Criada em 1995</p>  
+                <p>JavaScript é uma linguagem de programação.</p> 
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Saiba mais</a> 
+                </p> 
+            </article>
+    
+            <article class="card"> 
+                <h2>Python</h2> 
+                <p>Criado em 1992</p> 
+                <p> É uma linguagem de programação muito utilizada em Data Science.</p> 
+                <p><a href="https://docs.python.org/pt-br/3/" target="_blank">Saiba mais</a></p> 
+            </article>
+            
+            <article class="card"> <!-- Define um artigo ou um bloco de conteúdo independente -->
+                <h2>Java</h2> <!-- Título do artigo -->
+                <p>Criada em 1995</p> <!-- Parágrafo com o ano de criação -->
+                <p>Linguagem popular para aplicações corporativas e desenvolvimento Android.</p> <!-- Descrição da linguagem -->
+                <p><a href="https://www.java.com/pt-BR/" target="_blank">Saiba mais</a></p> <!-- Link para mais informações -->
+            </article>
+
+            <article class="card"> <!-- Define um artigo ou um bloco de conteúdo independente -->
+                <h2>C#</h2> <!-- Título do artigo -->
+                <p>Criada em 2000</p> <!-- Parágrafo com o ano de criação -->
+                <p>Linguagem moderna da Microsoft para web, jogos e aplicações Windows.</p> <!-- Descrição da linguagem -->
+                <p><a href="https://docs.microsoft.com/pt-br/dotnet/csharp/" target="_blank">Saiba mais</a></p> <!-- Link para mais informações -->
+            </article>
+        </section>
+    </main> 
+
+    <footer class="footer"> <!-- Define o rodapé da página, com a classe "footer" para estilização -->
+        <div class="footer-location"> <!-- Cria um contêiner para a localização -->
+            Brasil <!-- Texto da localização -->
+        </div> <!-- Fecha o contêiner da localização -->
+        <ul class="footer-links"> <!-- Cria uma lista não ordenada para os links do rodapé -->
+            <li><a href="#">Sobre</a></li> <!-- Item da lista com um link -->
+            <li><a href="#">Publicidade</a></li>
+            <li><a href="#">Negócios</a></li>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">Termos</a></li>
+        </ul> 
+    </footer> 
+</body> <!-- Fecha o corpo do documento -->
+</html> <!-- Fecha o documento HTML -->
