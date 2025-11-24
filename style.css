@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); /* Importa a fonte 'Quicksand' do Google Fonts para ser usada na página. */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap'); /* Importa a fonte 'Quicksand' do Google Fonts para ser usada na página. */
 
 * { /* Seletor universal: aplica as seguintes regras a TODOS os elementos da página. */
     box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos no tamanho total do elemento, não adicionados a ele. */
 }
 
 :root { /* Pseudo-classe que representa o elemento raiz do documento (o <html>). Usado para declarar variáveis CSS globais. */
-    --primary-color: #8ab4f8; /* Declara uma variável CSS para a cor primária (um azul claro). */
-    --secondary-color: #e8eaed; /* Declara uma variável para a cor secundária (um cinza claro). */
-    --tertiary-color: #9aa0a6; /* Declara uma variável para a cor terciária (um cinza médio). */
-    --bg-color: #202124; /* Declara uma variável para a cor de fundo principal (um cinza escuro). */
+    --primary-color: #8ab4f8; /* Cor primária (azul para links e títulos). */
+    --secondary-color: #FFFFFF; /* Cor secundária (texto principal, agora escuro). */
+    --tertiary-color: #5f6368; /* Cor terciária (texto de apoio, cinza escuro). */
+    --bg-color: #202124; /* Cor de fundo principal (agora branco). */
 }
 
 body { /* Seletor para o elemento <body>, que contém todo o conteúdo visível da página. */
     margin: 0; /* Remove a margem padrão que os navegadores aplicam ao <body>. */
     background: var(--bg-color); /* Define a cor de fundo do corpo da página usando a variável --bg-color. */
     color: var(--secondary-color); /* Define a cor padrão do texto para toda a página usando a variável --secondary-color. */
-    font-family: "Quicksand", sans-serif; /* Define a família de fontes padrão, com 'Quicksand' como primeira opção. */
+    font-family: "Oswald", sans-serif; /* Define a família de fontes padrão, com 'Quicksand' como primeira opção. */
 }
 
 header { /* Seletor para o elemento <header>. */
@@ -158,7 +158,7 @@ article a:hover { /* Seletor para quando o mouse está sobre um link do artigo. 
     color: var(--tertiary-color); /* Define a cor do texto do rodapé. */
     background-color: var(--bg-color); /* Define a cor de fundo do rodapé. */
     padding: 15px 20px; /* Adiciona espaçamento interno. */
-    border-top: 1px solid #3c4043; /* Adiciona uma linha divisória no topo do rodapé. */
+    border-top: 1px solid #dadce0; /* Adiciona uma linha divisória no topo do rodapé (cor ajustada para tema claro). */
     font-size: 0.8rem; /* Define um tamanho de fonte menor para o texto do rodapé. */
 }
 
